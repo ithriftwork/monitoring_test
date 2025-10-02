@@ -27,14 +27,14 @@
 
 ## Установка
 
-### Автоматическая установка
+### Автоматическая установка:
 sudo chmod +x install.sh\
 sudo ./install.sh
 
 
-### Ручная установка
+### Ручная установка:
 
-**Копировать файлы**\
+**Копировать файлы:**\
 sudo cp monitor_test.sh /usr/local/bin/\
 sudo chmod +x /usr/local/bin/monitor_test.sh\
 sudo cp monitor_test.service /etc/systemd/system/\
