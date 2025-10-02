@@ -1,0 +1,12 @@
+[Unit]
+Description=Run test process monitoring every minute
+Requires=monitor_test.service
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=1min
+AccuracySec=1s
+Persistent=true
+
+[Install]
+WantedBy=timers.target
