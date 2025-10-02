@@ -1,0 +1,20 @@
+[Unit]
+Description=Test Process Monitoring Service
+After=network.target
+Wants=monitor_test.timer
+
+[Service]
+Type=oneshot
+User=root
+ExecStart=/usr/local/bin/monitor_test.sh
+StandardOutput=journal
+StandardError=journal
+
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/var/log/monitoring.log /var/run/
+
+[Install]
+WantedBy=multi-user.target
